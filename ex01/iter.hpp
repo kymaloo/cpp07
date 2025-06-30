@@ -15,16 +15,16 @@
 
 # include <iostream>
 
-template <typename T>
+template <typename T, typename F>
 
-void iter(T *array, size_t lenght, void (*func)(T))
+void iter(T *array, size_t lenght, F ft)
 {
 	size_t i;
 
 	i = 0;
 	while (i != lenght)
 	{
-		func(array[i]);
+		ft(array[i]);
 		i++;
 	}
 }
